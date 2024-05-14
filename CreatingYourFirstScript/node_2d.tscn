@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bis7t8l541kr"]
+
+[ext_resource type="PackedScene" uid="uid://cra5c322p83w8" path="res://sprite_2d.tscn" id="1_epgnx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_epgnx")]
+
+[node name="Timer" type="Timer" parent="Sprite2D"]
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 115.0
+offset_top = 75.0
+offset_right = 458.0
+offset_bottom = 182.0
+text = "Togggle motion"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
